@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="pureWhiteBg" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" style="stop-color:#FEFEFE;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FDFDFD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F4F8;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:0.6" />
+      <stop offset="30%" style="stop-color:#3B82F6;stop-opacity:0.7" />
+      <stop offset="70%" style="stop-color:#60A5FA;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#93C5FD;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <linearGradient id="techBrush" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:0" />
+      <stop offset="20%" style="stop-color:#1E40AF;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#60A5FA;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#93C5FD;stop-opacity:0" />
+    </linearGradient>
+    
+    <radialGradient id="aiGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#1E40AF;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FEFEFE;stop-opacity:0" />
+    </radialGradient>
+    
+    <filter id="codeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <filter id="brandShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1E40AF" flood-opacity="0.15"/>
+    </filter>
+    
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#1E40AF" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <rect width="1080" height="1080" fill="url(#pureWhiteBg)" />
+  
+  <!-- 代码符号装饰 - 左上角 -->
+  <text x="150" y="200" font-family="'Courier New', monospace" font-size="48" 
+        fill="url(#codeGradient)" opacity="0.6" filter="url(#brandShadow)">&lt;/&gt;</text>
+  
+  <!-- 代码括号装饰 - 右上角 -->
+  <text x="850" y="180" font-family="'Courier New', monospace" font-size="36" 
+        fill="url(#codeGradient)" opacity="0.5" filter="url(#brandShadow)">{ }</text>
+  
+  <!-- AI大脑神经网络装饰 -->
+  <circle cx="200" cy="350" r="4" fill="#3B82F6" opacity="0.8" filter="url(#codeGlow)"/>
+  <circle cx="280" cy="320" r="3" fill="#60A5FA" opacity="0.7" filter="url(#codeGlow)"/>
+  <circle cx="320" cy="380" r="3.5" fill="#1E40AF" opacity="0.9" filter="url(#codeGlow)"/>
+  
+  <!-- 连接线 - 模拟AI神经网络 -->
+  <line x1="200" y1="350" x2="280" y2="320" 
+        stroke="url(#techBrush)" stroke-width="1.5" opacity="0.6" filter="url(#brandShadow)"/>
+  <line x1="280" y1="320" x2="320" y2="380" 
+        stroke="url(#techBrush)" stroke-width="1.5" opacity="0.6" filter="url(#brandShadow)"/>
+  <line x1="200" y1="350" x2="320" y2="380" 
+        stroke="#93C5FD" stroke-width="1" opacity="0.4"/>
+  
+  <!-- 代码编程元素 - 右下角 -->
+  <path d="M750,700 L850,650 L850,750 Z" 
+        fill="url(#codeGradient)" opacity="0.3" filter="url(#brandShadow)"/>
+  <rect x="780" y="720" width="40" height="8" 
+        fill="#F59E0B" opacity="0.6" rx="4" filter="url(#codeGlow)"/>
+  
+  <!-- 主标题背景装饰 -->
+  <ellipse cx="540" cy="480" rx="280" ry="60" 
+           fill="url(#aiGlow)" opacity="0.2" filter="url(#brandShadow)"/>
+  
+  <!-- 主标题 -->
+  <text x="540" y="500" text-anchor="middle" 
+        font-family="'Microsoft YaHei', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="72" font-weight="700" 
+        fill="#1E40AF" filter="url(#textGlow)">CodeBuddy</text>
+  
+  <!-- 副标题装饰线 -->
+  <path d="M380,540 Q540,530 700,540" 
+        fill="none" stroke="url(#techBrush)" stroke-width="2" opacity="0.5" filter="url(#codeGlow)"/>
+  
+  <!-- 副标题 -->
+  <text x="540" y="570" text-anchor="middle" 
+        font-family="'Microsoft YaHei', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="36" font-weight="300" 
+        fill="#3B82F6" filter="url(#textGlow)">智能编程助手</text>
+  
+  <!-- Slogan -->
+  <text x="540" y="620" text-anchor="middle" 
+        font-family="'Microsoft YaHei', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="24" font-weight="200" 
+        fill="#60A5FA" filter="url(#brandShadow)">让编程更智能，让创意无界限</text>
+  
+  <!-- 底部装饰 -->
+  <path d="M300,900 Q540,880 780,900" 
+        fill="none" stroke="url(#techBrush)" stroke-width="3" opacity="0.4" filter="url(#brandShadow)"/>
+  
+  <!-- 品牌标识点 -->
+  <circle cx="540" cy="920" r="6" 
+          fill="#F59E0B" opacity="0.8" filter="url(#codeGlow)"/>
+  
+  <!-- 代码装饰元素 -->
+  <text x="100" y="950" font-family="'Courier New', monospace" font-size="14" 
+        fill="#93C5FD" opacity="0.6">console.log("Hello CodeBuddy!");</text>
+  
+  <!-- 科技装饰点 -->
+  <circle cx="80" cy="80" r="2" 
+          fill="#3B82F6" opacity="0.4" filter="url(#codeGlow)"/>
+  <circle cx="1000" cy="1000" r="2.5" 
+          fill="#1E40AF" opacity="0.5" filter="url(#codeGlow)"/>
+</svg>
